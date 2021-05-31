@@ -16,19 +16,19 @@ Ever since I was 8 years old I thought snake was a game for dummies. To me it se
 
 A month ago I was participating in Flare-On, a CTF made for reverse engineers, by cyber security company FireEye. They base their challenges on real-world malware they’ve had to analyse. They like to include a “for fun” challenge and this year’s was to beat a snake game built for the NES.
 
-![](/blog/assets/images/flare-on-snake/press-start.png)
+![](//assets/images/flare-on-snake/press-start.png)
 
 I guess the intended solution for the challenge was to cheat. Learn how the game is coded so you can find a vulnerability and determine the flag. However, I saw an opportunity to make my dream come true. FCEUX is a NES emulator which offers Lua (similar to python) scripting. With Lua I was able to write to arbitrary addresses in memory. And that’s all I needed. The game was simple enough that I only ever read from one or two bytes in the entirety of memory and wrote ever wrote to one byte.
 
-![](/blog/assets/images/flare-on-snake/memory.png)
+![](//assets/images/flare-on-snake/memory.png)
 
 At the bottom of this post I’ve attached the code I used below, it’s simple enough for anybody with a little programming experience to understand. I even activated “turbo mode” to make it run super fast.
 
 Slow mode
-![](/blog/assets/images/flare-on-snake/trimmed-slow-af.gif)
+![](//assets/images/flare-on-snake/trimmed-slow-af.gif)
 
 Turbo mode
-![](/blog/assets/images/flare-on-snake/fast-and-trimmed.gif)
+![](//assets/images/flare-on-snake/fast-and-trimmed.gif)
 
 I learned later that the snake has to eat 25 apples, 4 times in a row to win the game. Fortunately, I left the program running for 10 minutes and came back to the victory flag on the screen.
 
