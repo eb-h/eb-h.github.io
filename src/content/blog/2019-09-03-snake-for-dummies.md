@@ -1,5 +1,5 @@
 ---
-pubDatetime: 2019-12-03
+pubDatetime: 2019-09-03
 title: "Flare-On 2019 Challenge 8: Snake for Dummies"
 featured: false
 draft: true
@@ -25,11 +25,13 @@ I guess the intended solution for the challenge was to cheat. Learn how the game
 At the bottom of this post I’ve attached the code I used below, it’s simple enough for anybody with a little programming experience to understand. I even activated “turbo mode” to make it run super fast.
 
 Slow mode
+
 ```
 ![](../../assets/images/flare-on-snake/trimmed-slow-af.gif)
 ```
 
 Turbo mode
+
 ```
 ![](../../assets/images/flare-on-snake/fast-and-trimmed.gif)
 ```
@@ -57,7 +59,7 @@ while (true) do
   currentLength = memory.readbyte(0xA);
   currentX = memory.readbyte(0x7)
   currentY = memory.readbyte(0x8)
-  
+
   -- handle very first move in game
   if currentX == RIGHTWALL - 1 and currentY == STARTING_Y and currentDirection == DIRECTION.RIGHT then
     memory.writebyte(0x5, DIRECTION.DOWN)
@@ -89,7 +91,7 @@ while (true) do
   -- handle going across the roof
   if currentX == 0 and currentY == 1 and currentDirection == DIRECTION.UP then
     memory.writebyte(0x5, DIRECTION.RIGHT)
-  end  
+  end
 
   emu.frameadvance();
 end;

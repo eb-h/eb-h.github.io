@@ -51,8 +51,8 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source-files: 'dist/'
-          destination-username: 'eb-h'
-          destination-repository: 'eb-h.github.io'
-          destination-directory: ''
-          commit-email: '21148681+eb-h@users.noreply.github.com'
+          source-files: "dist/"
+          destination-username: "eb-h"
+          destination-repository: "eb-h.github.io"
+          destination-directory: ""
+          commit-email: "21148681+eb-h@users.noreply.github.com"
