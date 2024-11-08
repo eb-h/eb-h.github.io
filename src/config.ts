@@ -12,6 +12,7 @@ export const SITE: Site = {
   postPerPage: 20,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
   showArchives: false,
+  showSearch: false,
 };
 
 export const LOCALE = {
@@ -33,10 +34,16 @@ export const SOCIALS: SocialObjects = [
     linkTitle: ` ${SITE.title} on Github`,
     active: true,
   },
-  //{
-  //  name: "X",
-  //  href: "https://github.com/satnaing/astro-paper",
-  //  linkTitle: `${SITE.title} on X`,
-  //  active: false,
-  //},
+  {
+    name: "X",
+    href: "https://x.com/Quickly_Rainbow",
+    linkTitle: `${SITE.title} on twitter`,
+    active: true,
+  },
+  {
+    name: "RSS",
+    href: "/rss.xml",
+    linkTitle: ` ${SITE.title} RSS Feed`,
+    active: true,
+  },
 ];
