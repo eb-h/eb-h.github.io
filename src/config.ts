@@ -8,8 +8,8 @@ export const SITE: Site = {
   title: "ebh",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
-  postPerIndex: 20,
-  postPerPage: 20,
+  postPerIndex: 1000,
+  postPerPage: 1000,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
   showArchives: false,
   showSearch: false,
